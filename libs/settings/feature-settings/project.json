@@ -1,0 +1,50 @@
+{
+  "name": "settings-feature-settings",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/settings/feature-settings/src",
+  "prefix": "angular-signals-realworld-example-app",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/settings/feature-settings/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/settings/feature-settings/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/settings/feature-settings/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/settings/feature-settings/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/settings/feature-settings/**/*.ts",
+          "libs/settings/feature-settings/**/*.html"
+        ]
+      }
+    }
+  }
+}
