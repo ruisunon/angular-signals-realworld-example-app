@@ -2,7 +2,7 @@
   "name": "angular-signals-realworld-example-app",
   "$schema": "node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "angular-signals-realworld-example-app",
+  "prefix": "sra",
   "sourceRoot": "./src",
   "tags": [],
   "targets": {

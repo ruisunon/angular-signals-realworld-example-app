@@ -2,7 +2,7 @@
   "name": "core-http-client",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/core/http-client/src",
-  "prefix": "angular-signals-realworld-example-app",
+  "prefix": "sra",
   "tags": [],
   "projectType": "library",
   "targets": {

@@ -2,7 +2,7 @@
   "name": "auth-feature-auth",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/auth/feature-auth/src",
-  "prefix": "angular-signals-realworld-example-app",
+  "prefix": "sra",
   "tags": [],
   "projectType": "library",
   "targets": {
