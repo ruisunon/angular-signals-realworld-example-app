@@ -36,9 +36,6 @@
 			"@core/http-client": [
 				"libs/core/http-client/src/index.ts"
 			],
-			"@core/shell": [
-				"libs/core/shell/src/index.ts"
-			],
 			"@profile/data-access": [
 				"libs/profile/data-access/src/index.ts"
 			],

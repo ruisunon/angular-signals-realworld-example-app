@@ -10,5 +10,7 @@ import { RouterModule } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent {
-  submit() {}
+  loginData = { username: '', password: '' };
+
+  onSubmitForm(event: any) {}
 }

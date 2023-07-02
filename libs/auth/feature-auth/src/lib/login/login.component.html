@@ -7,14 +7,34 @@
           <a [routerLink]="['/register']">Need an account?</a>
         </p>
 
-        <button
-          data-e2e-id="sign-in"
-          (click)="submit()"
-          class="btn btn-lg btn-primary pull-xs-right"
-          type="submit"
-        >
-          Sign in
-        </button>
+        <form class="form" #form="ngForm" (ngSubmit)="onSubmitForm($event)">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              class="form-control form-control-lg"
+              [(ngModel)]="loginData.username"
+              required
+              #firstName="ngModel"
+              name="username"
+              type="text"
+              id="username"
+              placeholder="Enter your username"
+            />
+            <div
+              *ngIf="firstName.dirty && firstName.hasError('required')"
+              class="input-error"
+            >
+              This field is required
+            </div>
+          </div>
+
+          <button
+            class="btn btn-lg btn-primary pull-xs-right"
+            [disabled]="form.invalid || form.pending"
+          >
+            Sign in
+          </button>
+        </form>
       </div>
     </div>
   </div>
